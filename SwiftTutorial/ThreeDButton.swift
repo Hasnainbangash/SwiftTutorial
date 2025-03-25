@@ -24,6 +24,7 @@ struct ThreeDButton: ButtonStyle {
             configuration.label
                 .offset(y: configuration.isPressed ? offset : 0)
         } //: ZSTACK
+        // It groups multiple layers into a single rendered entity before applying effects like shadows or opacity
         .compositingGroup()
         .shadow(radius: 6, y: 4)
     }
