@@ -14,16 +14,18 @@ struct ThreeDButton: ButtonStyle {
             let offset: CGFloat = 5
             
             RoundedRectangle(cornerRadius: 6)
-                .foregroundColor(.black)
+                .foregroundColor(Color(red: 62/255, green: 87/255, blue: 178/255))
                 .offset(y: offset)
             
             RoundedRectangle(cornerRadius: 6)
-                .foregroundColor(.gray)
+                .foregroundColor(Color(red: 123/255, green: 152/255, blue: 255/255))
                 .offset(y: configuration.isPressed ? offset : 0)
             
             configuration.label
                 .offset(y: configuration.isPressed ? offset : 0)
         } //: ZSTACK
+        .compositingGroup()
+        .shadow(radius: 6, y: 4)
     }
 }
 
@@ -32,6 +34,6 @@ struct ThreeDButton: ButtonStyle {
         
     }
     .foregroundColor(.white)
-    .frame(width: 100, height: 30, alignment: .center)
+    .frame(width: 100, height: 100, alignment: .center)
     .buttonStyle(ThreeDButton())
 }
