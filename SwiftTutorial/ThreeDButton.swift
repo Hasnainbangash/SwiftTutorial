@@ -16,6 +16,8 @@ struct ThreeDButton: ButtonStyle {
             
             RoundedRectangle(cornerRadius: 6)
                 .foregroundColor(.gray)
+            
+            configuration.label
         } //: ZSTACK
     }
 }
@@ -24,6 +26,7 @@ struct ThreeDButton: ButtonStyle {
     Button("Button") {
         
     }
+    .foregroundColor(.white)
     .frame(width: 100, height: 30, alignment: .center)
     .buttonStyle(ThreeDButton())
 }
